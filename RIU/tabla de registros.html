@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIU - Tabla de Registros</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #00d4b0;
+            --hover-color: #00e6f6;
+            --bg-overlay: rgba(0, 0, 0, 0.7);
+            --text-light: #e0e0e0;
+        }
+
+        /* Estilos generales */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: url('TABLA.jpg') center/cover fixed;
+            color: var(--primary-color);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Encabezado */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 50px;
+            background: var(--bg-overlay);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            max-width: 50px;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: var(--text-light);
+            font-size: 1.2em;
+            padding: 5px 10px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--hover-color);
+        }
+
+        /* Contenido principal */
+        .content-wrapper {
+            margin: 120px auto;
+            padding: 20px;
+            background: var(--bg-overlay);
+            border-radius: 10px;
+            max-width: 900px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid var(--primary-color);
+        }
+
+        th {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        tr:nth-child(even) {
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        tr:hover {
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        /* Botones */
+        .actions button {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 8px 15px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .actions button:hover {
+            background: var(--hover-color);
+        }
+
+        /* Modal */
+        #editModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 90%;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid var(--primary-color);
+            border-radius: 5px;
+        }
+
+        .form-group button {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .form-group button:hover {
+            background: var(--hover-color);
+        }
+
+        /* Pie de página */
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: var(--text-light);
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="Index.html" class="logo">
+            <img src="logotipo.jpg" alt="Logo de RIU" class="logo-img">
+            <span>Tabla de Registros</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="Index.html">Inicio</a></li>
+                <li><a href="registro.html">Registrar</a></li>
+                <li><a href="registro.html"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content-wrapper">
+            <h1></h1>
+            <table id="tablaRegistros">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Correo Electrónico</th>
+                        <th>Teléfono</th>
+                        <th>Descripción</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Contenido dinámico -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 RIU. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Modal para editar registro -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <h2>Editar Registro</h2>
+            <form id="editForm">
+                <div class="form-group">
+                    <label for="editNombreCompleto">Nombre completo</label>
+                    <input type="text" id="editNombreCompleto" name="editNombreCompleto" required>
+                </div>
+                <div class="form-group">
+                    <label for="editCorreoElectronico">Correo electrónico</label>
+                    <input type="email" id="editCorreoElectronico" name="editCorreoElectronico" required>
+                </div>
+                <div class="form-group">
+                    <label for="editTelefono">Número de teléfono</label>
+                    <input type="tel" id="editTelefono" name="editTelefono" required>
+                </div>
+                <div class="form-group">
+                    <label for="editDescripcionApp">Descripción de la aplicación</label>
+                    <textarea id="editDescripcionApp" name="editDescripcionApp" required></textarea>
+                </div>
+                <button type="submit">Guardar cambios</button>
+                <button type="button" id="cancelEdit">Cancelar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

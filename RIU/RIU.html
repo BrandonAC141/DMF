@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto RIU - Syntexa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos generales */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f1f1f1;
+            color: #333;
+            height: 100%;
+            overflow-x: hidden;
+            background-image: url('RIU.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            filter: brightness(1);
+        }
+
+        /* Contenedor del encabezado */
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            color: #00d4b0;
+            font-size: 1.6rem;
+            text-decoration: none;
+        }
+
+        .logo img {
+            width: 40px;
+            margin-right: 10px;
+            transition: transform 0.3s;
+        }
+
+        .logo:hover img {
+            transform: rotate(360deg);
+        }
+
+        
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #00d4b0;
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Secciones */
+        .section {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .section h2 {
+            color: #00d4b0;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            color: #ddd;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        /* Animación de aparición */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Estilos del contenedor principal */
+        .content-wrapper {
+            padding: 100px 50px 50px;
+            text-align: center;
+            max-width: 900px;
+            margin: auto;
+            z-index: 1;
+        }
+
+        .content-wrapper h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        /* Botón de llamada a la acción */
+        .cta-button {
+            background-color: #00d4b0;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+
+        .cta-button:hover {
+            background-color: #00e6b8;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Diseño responsivo */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 30px;
+            }
+
+            header .logo {
+                font-size: 1.4rem;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                padding: 10px 15px;
+            }
+
+            .content-wrapper h1 {
+                font-size: 2.2rem;
+            }
+
+            .cta-button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <a href="#" class="logo">
+            <img src="logotipo.jpg" alt="Logo de Syntexa">
+            <span>Syntexa Web Solutions</span>
+        </a>
+        <nav>
+           
+            <a href="index.html">Inicio</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="content-wrapper">
+            <h1>Bienvenidos al Proyecto RIU</h1>
+
+
+
+            <section id="mision" class="section">
+                <h2>Objetivo</h2>
+                <p>Desarrollo de una aplicación nativa para que el doctor agilice la gestión de citas
+                 y seguimiento de historial de pacientes, mejorando la eficiencia y satisfacción de los 
+                 clientes, y tenga una mejor experiencia y llevar un mejor control.</p>
+            </section>
+            <section id="mision" class="section">
+                <h2>Descripcion</h2>
+                <p>Los médicos enfrentan dificultades para acceder y gestionar de manera eficiente el 
+                    historial clínico de sus pacientes debido a la fragmentación de la información en 
+                    diferentes sistemas o formatos físicos. Esto puede llevar a retrasos en la toma de 
+                    decisiones, errores en el tratamiento, y una atención menos personalizada, afectando
+                     tanto al paciente como al profesional de la salud.</p>
+            </section>
+
+            <section id="mision" class="section">
+                <h2>Metodoligia</h2>
+                <p>CASCADA.
+                    La metodología en cascada es un enfoque de la gestión de proyectos que sigue un proceso lineal y 
+                    secuencial. Este enfoque es popular en ingeniería de software y se denomina ciclo de vida de desarrollo 
+                    de software (SDLC). Sin embargo, el desarrollo de productos también está utilizando este modelo.
+                    </p>
+            </section>
+            <!-- Sección: Misión -->
+            <section id="mision" class="section">
+                <h2>Requirimientos Funcionales</h2>
+                <p>3 Requerimientos funcionales.
+
+                    Los requerimientos funcionales expresan lo que un sistema debe hacer por los usuarios y describen el comportamiento que debe tener en términos de las acciones que debe ser capaz de realizar, abarcando cualquier actividad que deba llevar a cabo.
+                    1.	La aplicación permitirá que el médico deben pueda acceder al historial clínico completo de sus pacientes, incluyendo diagnósticos y tratamientos previos
+                    2.	La aplicación permitirá que los médicos puedan actualizar la información del historial clínico, según sus permisos.                       
+                    3.	La aplicación debe permitir que el médico pueda gestionar las citas de los pacientes.
+                    4.	La aplicación permitirá que el médico pueda crear una cuenta e iniciar sesión.
+                    5.	La aplicación debe permitir que el médico registre nuevos pacientes.
+                    </p>
+            </section>
+
+            <!-- Sección: Visión -->
+            <section id="vision" class="section">
+                <h2>Tecnologias y Herramientas </h2>
+                <p>
+                    VISUAL STUDIO CODE.
+                    SQL.
+                    Java.
+                    Xamarin.
+                </p>
+            </section>
+
+            <!-- Sección: Descripción -->
+            <section id="descripcion" class="section">
+                <h2>Coste</h2>
+                <p>Se aplicó un costo promedio por punto funcional, utilizando un valor de referencia de
+                    $20 por CFP. Este costo promedio puede variar según la complejidad y otros factores adicionales.
+                    Total Costo = 14 CFP * $20/CFP = $280
+                    </p>
+            </section>
+
+            <section id="mision" class="section">
+                <h2>Conclusion</h2>
+                <p>En un entorno de atención médica cada vez más digitalizado y exigente en términos de rapidez,
+                     eficiencia y seguridad, Syntexa se ha posicionado como una respuesta innovadora a los desafíos 
+                     actuales mediante el desarrollo de RIU, una aplicación médica diseñada para revolucionar la 
+                     gestión de citas, historiales clínicos y tratamientos. Esta solución surge en respuesta a los
+                      problemas identificados en los métodos tradicionales de gestión de datos médicos, los cuales 
+                      aún dependen de procesos manuales y registros en papel. Estos métodos no solo son ineficaces y 
+                      lentos, sino que también presentan riesgos significativos, como la pérdida o el error en la 
+                      actualización de los historiales clínicos, lo que puede afectar negativamente la calidad de 
+                      la atención médica y la confianza entre médico y paciente.</p>
+            </section>
+
+            
+        </div>
+    </main>
+
+</body>
+</html>
